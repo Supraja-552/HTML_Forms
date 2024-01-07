@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            Select options:
+         {% for i in QLWO %}
+         
+         <label for="na">{{i.name}}</label>
+         <input type="checkbox" name="na" id="na" value="{{i.pk}}"><br><br>
+         {% endfor %}   
+         <input type="submit" value="check_box">         
+        </form>
+    </center>
+</body>
+</html>
